@@ -1,0 +1,14 @@
+!pip install pandas
+    
+import pandas as pd
+
+
+df1 = pd.read_excel('df1.xlsx', sheet_name='sheet1')
+
+
+df2 = pd.read_excel('df2.xlsx', sheet_name='sheet2')
+
+
+combined_df = pd.merge(df1[['Reçete']], df2[['Reçete']], on='Reçete')
+
+print(combined_df)
